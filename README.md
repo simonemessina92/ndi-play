@@ -2,11 +2,11 @@
 
 A portable Windows x64 player that loops local video files and generates NDI feeds using VLC and the official NDI VLC Plugin.
 
-## 1.0 Gold
+## [Download NDI PLAY 1.0 Gold — Windows x64 EXE](https://github.com/simonemessina92/ndi-play/raw/b844eebf9483daecaf46f02e1a9e61478afe39c9/dist/NDI%20PLAY.exe)
 
-Download [NDI PLAY.exe](dist/NDI%20PLAY.exe) using **Download raw file** on its GitHub file page. Published on October 7, 2026.
+[Release notes](RELEASE_NOTES.md) · [SHA-256 checksum](dist/SHA256SUMS.txt)
 
-This release is based on the owner-approved 0.3.3-dev executable. Its version resources and embedded source archive were updated to **1.0 Gold**; executable code remains unchanged. See [SHA-256 checksums](dist/SHA256SUMS.txt).
+Released October 7, 2026. Version 1.0 Gold retains the playback code from 0.3.3-dev, with updated version resources and an embedded source archive.
 
 ## Requirements
 
@@ -48,10 +48,9 @@ Each file runs in an independent worker process. The code limit is 256 workers; 
 
 Develop on `dev`. Promote changes to `main` after Windows and NDI testing. Do not replace the golden executable with an unverified build.
 
-All repository documentation, comments, commit messages, issues, and pull requests must be written in English.
-
 Read the [build instructions](docs/BUILD.md), [technical notes](docs/TECHNICAL.md), and [golden status](docs/GOLDEN.md).
 
 ## Licensing
 
 See the original [source license](src/LICENSE.txt). VideoLAN headers retain their own notices and licenses. VLC and the NDI runtime/plugin are not distributed here. This is an independent project; no official affiliation is implied.
+
