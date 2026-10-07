@@ -1,14 +1,16 @@
-# Golden archiviata — 7 ottobre 2026
+# 1.0 Gold — October 7, 2026
 
-File: `dist/NDI PLAY.exe`
-Dimensione: 816795 byte
-Versione incorporata: `1.0 Gold`
-SHA-256: `e36f15fe880d1252522000efe2653d18bc92f466f65df7fd324ce0eb9fdf677d`
+- File: `dist/NDI PLAY.exe`
+- Size: 816795 bytes
+- Embedded version: `1.0 Gold`
+- SHA-256: `e36f15fe880d1252522000efe2653d18bc92f466f65df7fd324ce0eb9fdf677d`
 
-Il proprietario ha dichiarato questa copia golden. La pubblicazione aggiorna soltanto le risorse e il checksum PE, senza ricompilare o modificare il codice eseguibile. I sorgenti e le note originali sono estratti dall’archivio ZIP incorporato; README.txt e VERIFICATION.txt descrivono ora 1.0 Gold. Hash della copia precedente in ORIGINAL_SHA256.txt.
+The owner approved the original 0.3.3-dev copy as golden. Publication updated version resources, the embedded source archive, and the PE checksum without recompiling or changing executable code. The original executable's hash is recorded in [ORIGINAL_SHA256.txt](ORIGINAL_SHA256.txt).
 
-Verifiche di questa pubblicazione: formato PE Windows x64, archivio ZIP integro, estrazione sorgenti e risorse, conservazione byte per byte delle sezioni eseguibili e checksum. Non è stata eseguita una nuova prova Windows/NDI o una ricompilazione in questo ambiente.
+Publication checks covered Windows x64 PE format, embedded ZIP integrity, source/resource extraction, unchanged executable code, and checksum generation. No new Windows/NDI runtime test or compilation was performed in this environment.
 
-Le note originali riportano una precedente verifica utente di quattro canali audio in vMix e NDI Analysis. La modifica 0.3.3 abilita la cache plugin rispetto a 0.3.2, mantenendo la scansione. Tempi di caricamento e capacità HD/4K non sono certificati da questa pubblicazione.
+Original notes report a previous user verification of four audio channels in vMix and NDI Analysis. Version 0.3.3 enabled plugin caching compared with 0.3.2 while retaining scanning. This publication does not certify startup timing or HD/4K capacity.
 
-Per promuovere una nuova golden: test di una sorgente, prima traccia multicanale, più sorgenti, loop, rimozione individuale, aggiunta successiva, chiusura senza worker residui, e carico HD/4K sul PC di destinazione. Annotare versioni VLC/plugin, hardware e risultato prima del merge dev → main.
+Before promoting a new golden, test one source, a multichannel first audio track, multiple sources, looping, individual removal, subsequent additions, clean shutdown with no remaining workers, and HD/4K workloads on the target PC. Record VLC/plugin versions, hardware, and results before merging dev into main.
+
+Subsequent English documentation updates do not change this executable or its packaged source snapshot.

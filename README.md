@@ -1,43 +1,57 @@
 # NDI PLAY
 
-Player portable per Windows x64 che riproduce file video locali in loop e genera feed NDI utilizzando VLC e il plugin NDI ufficiale.
+A portable Windows x64 player that loops local video files and generates NDI feeds using VLC and the official NDI VLC Plugin.
 
-## Golden
+## 1.0 Gold
 
-La versione consegnata e approvata da Simone è conservata **con metadati aggiornati a 1.0 Gold** in [`dist/NDI PLAY.exe`](dist/NDI%20PLAY.exe). Scaricare con il pulsante **Download raw file** nella pagina del file.
+Download [NDI PLAY.exe](dist/NDI%20PLAY.exe) using **Download raw file** on its GitHub file page. Published on October 7, 2026.
 
-Il binario riporta `1.0 Gold` nelle proprietà Windows. Deriva dalla golden approvata 0.3.3-dev: codice eseguibile invariato, risorse di versione e archivio sorgenti aggiornati. Data di archiviazione: 7 ottobre 2026. Hash SHA-256 in [`dist/SHA256SUMS.txt`](dist/SHA256SUMS.txt).
+This release is based on the owner-approved 0.3.3-dev executable. Its version resources and embedded source archive were updated to **1.0 Gold**; executable code remains unchanged. See [SHA-256 checksums](dist/SHA256SUMS.txt).
 
-## Requisiti e utilizzo
+## Requirements
 
-- Windows x64; sorgente impostato per API Windows 10.
-- VLC **3.x a 64 bit**, installato sul PC.
-- Plugin NDI ufficiale per VLC, installato nella stessa installazione VLC x64.
-- Un ricevitore NDI, per esempio NDI Studio Monitor o vMix, e rete configurata per NDI.
+- Windows x64; the source targets Windows 10 APIs.
+- Installed **VLC 3.x, 64-bit**.
+- The official NDI VLC Plugin installed in that VLC installation.
+- An NDI receiver such as NDI Studio Monitor or vMix, and a network configured for NDI.
 
-Il singolo EXE è portable; VLC e il plugin restano dipendenze esterne. Non richiede .NET.
+The application is a single portable EXE. VLC and the NDI plugin are external dependencies. .NET is not required.
 
-1. Trascinare uno o più video locali su `NDI PLAY.exe`.
-2. Selezionare il feed nel ricevitore NDI.
-3. Trascinare altri file sull’EXE per aggiungere sorgenti alla stessa istanza.
-4. Clic destro sull’icona nell’area di notifica → **Remove source** per fermare un solo file, oppure **Close** per chiudere tutto.
+## Usage
 
-La rimozione della sorgente non cancella il video. Non viene salvata una playlist. Avvio da terminale: `"NDI PLAY.exe" "C:\Video\clip.mp4"`.
+1. Drag one or more local videos onto `NDI PLAY.exe`.
+2. Select the feed in your NDI receiver.
+3. Drop additional files onto the EXE to add sources to the existing tray instance.
+4. Right-click the notification-area icon and choose **Remove source** to stop one file, or **Close** to stop all players.
 
-## Audio e loop
+Removing a source does not delete its media file. Playlists are not saved.
 
-Viene selezionata la **prima traccia audio** del file. I canali di quella traccia sono affidati al plugin senza un downmix stereo imposto dal launcher: una prima traccia con quattro canali deve arrivare con quattro canali, compatibilmente con decoder e plugin. Non vengono unite tracce audio separate.
+Command-line example:
 
-Ogni file ha un processo worker indipendente; il limite nel codice è 256, non una capacità garantita del PC. I file ripetono autonomamente: non c’è sincronizzazione tra sorgenti né una garanzia di loop senza interruzioni.
+```bat
+"NDI PLAY.exe" "C:\Video\clip.mp4"
+```
 
-## Repository
+## Audio and looping
 
-- `main`: golden e documentazione stabile.
-- `dev`: sviluppo e prove; parte dalla stessa golden.
-- `dist/`: eseguibile golden e checksum.
-- `src/`: sorgenti originali recuperati dall’archivio incorporato nell’EXE, risorse e header VLC.
-- `docs/`: note tecniche, compilazione e verifiche.
+The player selects the file's **first audio track**. Its native channel layout is passed to the installed plugin without a stereo downmix imposed by the launcher. A four-channel first track is intended to retain all four channels, subject to decoder and plugin support. Separate audio tracks are not combined.
 
-Le prossime modifiche si fanno su `dev`; dopo il test Windows e NDI si promuovono su `main`. Non sovrascrivere la golden con build non verificate.
+Each file runs in an independent worker process. The code limit is 256 workers; this is not a guaranteed hardware capacity. Sources loop independently, without synchronization or a guarantee of seamless transitions.
 
-Documentazione: [compilazione](docs/BUILD.md), [architettura e diagnosi](docs/TECHNICAL.md), [stato golden](docs/GOLDEN.md). Licenza originale: [src/LICENSE.txt](src/LICENSE.txt). Gli header VideoLAN conservano i propri avvisi e licenze; VLC e il runtime/plugin NDI non sono distribuiti qui. Progetto indipendente; nessuna affiliazione ufficiale implicita.
+## Repository workflow
+
+- `main`: approved golden version and stable documentation.
+- `dev`: development and testing, initially based on the same golden commit.
+- `dist/`: golden executable and checksum.
+- `src/`: recovered original source, resources, and VLC headers.
+- `docs/`: build instructions, technical notes, and validation status.
+
+Develop on `dev`. Promote changes to `main` after Windows and NDI testing. Do not replace the golden executable with an unverified build.
+
+All repository documentation, comments, commit messages, issues, and pull requests must be written in English.
+
+Read the [build instructions](docs/BUILD.md), [technical notes](docs/TECHNICAL.md), and [golden status](docs/GOLDEN.md).
+
+## Licensing
+
+See the original [source license](src/LICENSE.txt). VideoLAN headers retain their own notices and licenses. VLC and the NDI runtime/plugin are not distributed here. This is an independent project; no official affiliation is implied.
