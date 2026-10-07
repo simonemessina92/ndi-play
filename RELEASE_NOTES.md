@@ -13,9 +13,9 @@
 - Remove individual sources or stop all players from the tray menu.
 - Run each source in a separate worker process.
 
-### Release details
+### Playback
 
-Version 1.0 Gold packages the playback code from 0.3.3-dev with updated version information and embedded source documentation. Plugin caching and scanning are enabled. Sources are not synchronized, and seamless loop transitions are not guaranteed.
+Sources loop independently. Playback is not synchronized between files, and seamless loop transitions are not guaranteed.
 
 ### Requirements
 

@@ -6,8 +6,6 @@ A portable Windows x64 player that loops local video files and generates NDI fee
 
 [Release notes](RELEASE_NOTES.md) · [SHA-256 checksum](dist/SHA256SUMS.txt)
 
-Released October 7, 2026. Version 1.0 Gold retains the playback code from 0.3.3-dev, with updated version resources and an embedded source archive.
-
 ## Requirements
 
 - Windows x64; the source targets Windows 10 APIs.

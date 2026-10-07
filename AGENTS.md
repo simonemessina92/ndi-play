@@ -6,3 +6,5 @@ Use `dev` for development and testing. Promote verified changes to `main`. Prese
 
 
 Use direct, natural technical writing. Do not mention the project owner or private conversations in project documentation. Put a prominent direct EXE download link at the top of release notes.
+
+Keep README and release notes focused on features, requirements, downloads, and usage. Omit internal packaging history and comparisons with unpublished development builds. Keep build provenance in technical records only.
