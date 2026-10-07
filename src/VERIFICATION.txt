@@ -1,0 +1,1 @@
+NDI PLAY 1.0 Gold. Playback code unchanged from approved 0.3.3-dev. Version resources and embedded source archive updated without recompiling executable code. Windows/NDI runtime not retested during publication.

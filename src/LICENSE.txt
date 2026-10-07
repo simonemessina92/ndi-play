@@ -1,0 +1,9 @@
+NDI PLAY Portable launcher source
+Copyright 2026 NDI PLAY contributors
+
+Permission is granted, free of charge, to use, copy, modify and distribute this
+launcher source and executable. The software is provided AS IS, without warranty.
+
+VLC and NDI dependencies are not redistributed. Their own licenses apply.
+The supplied NDI PLAY icon is used for this project; no rights to NDI trademarks
+are granted by this source license.
